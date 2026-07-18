@@ -80,7 +80,16 @@ export function attach(uid) {
   if (!rt) return null;
   patchRenderer();
   const wi = rt.GetInstanceByUID(uid).GetWorldInfo();
-  wi.GetBoundingBox = () => wi.GetLayer().GetViewport();
+  // In the v1 era GetBoundingBox returned a C3.Rect, so v1 could return the
+  // viewport Rect directly. Since then it returns a C3.AABB3D and callers use
+  // its 3D API (IsInViewport calls getBack()), so the override must return a
+  // viewport sized AABB3D. Back and front stay 0, which keeps the 2D culling
+  // path and makes render and collision cells cover the whole viewport.
+  const aabb = new self.C3.AABB3D();
+  wi.GetBoundingBox = () => {
+    aabb.setFromRect(wi.GetLayer().GetViewport());
+    return aabb;
+  };
   return wi;
 }
 
