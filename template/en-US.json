@@ -1,0 +1,56 @@
+{
+  "languageTag": "en-US",
+  "fileDescription": "Strings for skymen_mask.",
+  "text": {
+    "plugins": {
+      "skymen_mask": {
+        "name": "Clipping Mask",
+        "description": "A Clipping mask addon for Construct 3",
+        "help-url": "https://www.construct.net",
+        "aceCategories": {
+          "general": "General"
+        },
+        "properties": {
+          "start": {
+            "name": "Start Clipping",
+            "desc": "Enable to start clipping. To prevent rendering issues, you need a second mask with this to off to stop clipping at a higher Z index."
+          },
+          "visible": {
+            "name": "Visible",
+            "desc": "Enable to make the mask visible. When invisible, the mask will not clip."
+          },
+          "hotspot-x": {
+            "name": "Origin X",
+            "desc": "X Coordinate (0-1)"
+          },
+          "hotspot-y": {
+            "name": "Origin Y",
+            "desc": "Y Coordinate (0-1)"
+          }
+        },
+        "actions": {
+          "SetIsStart": {
+            "list-name": "Start clipping",
+            "display-text": "Set Start clipping to {0}",
+            "description": "Set whether to start clipping or end clipping",
+            "params": {
+              "isStart": {
+                "name": "Is Start",
+                "desc": "Is Start"
+              }
+            }
+          }
+        },
+        "conditions": {
+          "IsStart": {
+            "list-name": "Is Clipping",
+            "display-text": "Check if clipping is enabled",
+            "description": "Check if clipping is enabled",
+            "params": {}
+          }
+        },
+        "expressions": {}
+      }
+    }
+  }
+}
