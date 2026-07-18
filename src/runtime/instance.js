@@ -10,7 +10,7 @@ export default function (parentClass) {
       const properties = this._getInitProperties();
       if (properties) {
         this.isStart = properties[0];
-        this.instance.isVisible = properties[1];
+        this.isVisible = properties[1];
       }
 
       // The internal runtime is captured from the first Sprite constructed,
@@ -20,26 +20,25 @@ export default function (parentClass) {
 
     _tick() {
       if (!internals.ready()) return;
-      this._wi = internals.attach(this.instance.uid);
+      this._wi = internals.attach(this.uid);
       this._setTicking(false);
     }
 
     _draw(renderer) {
       if (!this._wi) return;
       if (this.isStart) {
-        const inst = this.instance;
-        const x = inst.x;
-        const y = inst.y;
-        const w = inst.width;
-        const h = inst.height;
-        const ox = inst.originX;
-        const oy = inst.originY;
+        const x = this.x;
+        const y = this.y;
+        const w = this.width;
+        const h = this.height;
+        const ox = this.originX;
+        const oy = this.originY;
         internals.setScissorFromLayerRect(
           this._wi,
           x - ox * w,
           y - oy * h,
           x + (1 - ox) * w,
-          y + (1 - oy) * h
+          y + (1 - oy) * h,
         );
       } else {
         internals.removeScissor();
