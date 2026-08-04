@@ -1,14 +1,22 @@
 <img src="./src/icon.svg" width="100" /><br>
 # Clipping Mask
 <i>A Clipping mask addon for Construct 3</i> <br>
-### Version 2.0.0.0
+### Version 2.0.0.2
 
-[<img src="https://placehold.co/200x50/4493f8/FFF?text=Download&font=montserrat" width="200"/>](https://github.com/skymen/mikal-3d-model-v2-compat/releases/download/skymen_mask-2.0.0.0.c3addon/skymen_mask-2.0.0.0.c3addon)
+[<img src="https://placehold.co/200x50/4493f8/FFF?text=Download&font=montserrat" width="200"/>](https://github.com/skymen/clipping_mask/releases/download/skymen_mask-2.0.0.2.c3addon/skymen_mask-2.0.0.2.c3addon)
 <br>
-<sub> [See all releases](https://github.com/skymen/mikal-3d-model-v2-compat/releases) </sub> <br>
+<sub> [See all releases](https://github.com/skymen/clipping_mask/releases) </sub> <br>
+
+#### What's New in 2.0.0.2
+- **Fixed:** fixed hack
+
+<sub>[View full changelog](#changelog)</sub>
 
 ---
 <b><u>Author:</u></b> reddog, skymen <br>
+<b>[Construct Addon Page](https://www.construct.net/en/make-games/addons/1183/clipping-mask)</b>  <br>
+<b>[Addon Website](https://www.construct.net/en/make-games/addons/1183/clipping-mask)</b>  <br>
+<b>[Documentation](https://www.construct.net/en/make-games/addons/1183/clipping-mask/documentation)</b>  <br>
 <sub>Made using [CAW](https://marketplace.visualstudio.com/items?itemName=skymen.caw) </sub><br>
 
 ## Table of Contents
@@ -68,6 +76,12 @@ npm run dev
 
 ---
 ## Changelog
+
+**2.0.0.2**
+- **Fixed:** fixed hack
+
+**2.0.0.1**
+- **Fixed:** Fixing broken instance ref
 
 **0.0.0.0**
 - **Added:** Initial release.

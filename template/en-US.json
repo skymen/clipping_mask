@@ -6,7 +6,7 @@
       "skymen_mask": {
         "name": "Clipping Mask",
         "description": "A Clipping mask addon for Construct 3",
-        "help-url": "https://www.construct.net",
+        "help-url": "https://www.construct.net/en/make-games/addons/1183/clipping-mask/documentation",
         "aceCategories": {
           "general": "General"
         },

@@ -12,8 +12,8 @@ export const name = "Clipping Mask";
 export const version = _version;
 export const minConstructVersion = undefined;
 export const author = "reddog, skymen";
-export const website = "https://www.construct.net";
-export const documentation = "https://www.construct.net";
+export const website = "https://www.construct.net/en/make-games/addons/1183/clipping-mask";
+export const documentation = "https://www.construct.net/en/make-games/addons/1183/clipping-mask/documentation";
 export const description = "A Clipping mask addon for Construct 3";
 export const category = ADDON_CATEGORY.GENERAL;
 
