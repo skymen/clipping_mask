@@ -13,5 +13,10 @@
     "added": "",
     "changed": "",
     "fixed": "fixed hack"
+  },
+  "2.1.0.0": {
+    "added": "",
+    "changed": "Uses Construct's new public scissor API instead of patching the renderer. Known issue: an object with effects between a start and an end mask can break the clipping, until Construct fixes it on their side.",
+    "fixed": ""
   }
 }

@@ -5,7 +5,7 @@ export default function (parentClass) {
     constructor() {
       super();
       this.isStart = true;
-      this._wi = null;
+      this._attached = false;
 
       const properties = this._getInitProperties();
       if (properties) {
@@ -20,12 +20,12 @@ export default function (parentClass) {
 
     _tick() {
       if (!internals.ready()) return;
-      this._wi = internals.attach(this.uid);
+      this._attached = internals.attach(this.uid);
       this._setTicking(false);
     }
 
     _draw(renderer) {
-      if (!this._wi) return;
+      if (!this._attached) return;
       if (this.isStart) {
         const x = this.x;
         const y = this.y;
@@ -33,15 +33,17 @@ export default function (parentClass) {
         const h = this.height;
         const ox = this.originX;
         const oy = this.originY;
-        internals.setScissorFromLayerRect(
-          this._wi,
+        const [left, top] = this.layer.layerToDrawSurface(
           x - ox * w,
           y - oy * h,
+        );
+        const [right, bottom] = this.layer.layerToDrawSurface(
           x + (1 - ox) * w,
           y + (1 - oy) * h,
         );
+        renderer.setScissorRect(left, top, right - left, bottom - top);
       } else {
-        internals.removeScissor();
+        renderer.removeScissorRect();
       }
     }
 

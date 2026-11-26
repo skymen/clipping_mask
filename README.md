@@ -1,14 +1,14 @@
 <img src="./src/icon.svg" width="100" /><br>
 # Clipping Mask
 <i>A Clipping mask addon for Construct 3</i> <br>
-### Version 2.0.0.2
+### Version 2.0.0.3
 
-[<img src="https://placehold.co/200x50/4493f8/FFF?text=Download&font=montserrat" width="200"/>](https://github.com/skymen/clipping_mask/releases/download/skymen_mask-2.0.0.2.c3addon/skymen_mask-2.0.0.2.c3addon)
+[<img src="https://placehold.co/200x50/4493f8/FFF?text=Download&font=montserrat" width="200"/>](https://github.com/skymen/clipping_mask/releases/download/skymen_mask-2.0.0.3.c3addon/skymen_mask-2.0.0.3.c3addon)
 <br>
 <sub> [See all releases](https://github.com/skymen/clipping_mask/releases) </sub> <br>
 
-#### What's New in 2.0.0.2
-- **Fixed:** fixed hack
+#### What's New in 2.0.0.3
+- **Changed:** Uses Construct's new public scissor API (IRenderer.setScissorRect) instead of patching the renderer. Requires Construct r512 or later. Known issue: an object with effects between a start and an end mask can break the clipping, until Construct fixes it on their side.
 
 <sub>[View full changelog](#changelog)</sub>
 
@@ -76,6 +76,9 @@ npm run dev
 
 ---
 ## Changelog
+
+**2.0.0.3**
+- **Changed:** Uses Construct's new public scissor API (IRenderer.setScissorRect) instead of patching the renderer. Requires Construct r512 or later. Known issue: an object with effects between a start and an end mask can break the clipping, until Construct fixes it on their side.
 
 **2.0.0.2**
 - **Fixed:** fixed hack
